@@ -7,7 +7,7 @@ app = Client("session_name",
 
 @app.on_message()
 async def test_send_voice(client, message):
-  voice = '1DirectedbyRobertWeide.ogg
+  voice = '1DirectedbyRobertWeide.ogg'
   await app.send_voice(message.chat.id, voice, reply_to_message_id=message.reply_to_message.message_id)# отправить в чат и ответить на сообщение на которое вы ответили
   await app.send_voice(message.chat.id, voice)# отправить войс в чат
 
