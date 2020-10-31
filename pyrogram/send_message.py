@@ -15,3 +15,6 @@ async def test_send_message(client, message):
   
   await app.send_message(message.chat.id, f'''тестовое сообщение''', reply_to_message_id=message.reply_to_message.message_id)#отправить сообщение в чат Ответитив на сообщение, используя его идентификатор
   await app.send_message(message.from_user.id, f'''тестовое сообщение''', reply_to_message_id=message.reply_to_message.message_id)#отправить сообщение юзеру Ответитив на сообщение, используя его идентификатор
+
+  await app.send_message(message.chat.id, "**not bold**, <i>italic<i>", parse_mode="html")#отправить сообщение в чат используя только стили HTML для этого запроса
+  await app.send_message(message.from_user.id, "**not bold**, <i>italic<i>", parse_mode="html")#отправить сообщение юзеру используя только стили HTML для этого запроса
