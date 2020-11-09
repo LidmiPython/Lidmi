@@ -2,7 +2,7 @@ from pyrogram.raw.functions.channels import CreateChannel
 from pyrogram.raw.types import InputGeoPoint
 
 #Создайте супергруппу/канал.
-@app.on_message(message_text_filter(f"123123123"))
+@app.on_message()
 async def channels_CreateChannel(client, message):
 	msg = await app.send(CreateChannel(
 		title="test_channels_CreateChannel",
