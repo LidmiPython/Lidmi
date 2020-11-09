@@ -1,8 +1,8 @@
 from pyrogram.raw.functions.channels import DeleteHistory
 
 #Удалить историю супергруппы.
-@app.on_message(message_text_filter(f"123123123"))
-async def channels_DeleteChannel(client, message):
+@app.on_message()
+async def channels_DeleteHistory(client, message):
 	msg = await app.send(DeleteHistory(
 		channel=await app.resolve_peer(-1001158541073),
 		max_id=1))
