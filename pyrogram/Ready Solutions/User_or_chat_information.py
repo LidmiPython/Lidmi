@@ -71,7 +71,6 @@ def photo_me(client, message):
 		elif message.chat.type == "supergroup":
 			if message.from_user.photo:
 				chat = app.get_users(message.reply_to_message.from_user.id)
-				print(chat)
 				app.send_photo(	chat_id=message.chat.id,
 							photo=app.get_profile_photos(int(chat.id))[x].file_id,
 							file_ref=app.get_profile_photos(int(chat.id))[x].file_ref,
@@ -94,7 +93,6 @@ def photo_me(client, message):
 		elif message.chat.type == "supergroup":
 			if message.from_user.photo:
 				chat = app.get_chat(message.chat.id)
-				print(chat)
 				app.send_photo(chat_id=message.chat.id,
 							photo=app.get_profile_photos(int(chat.id))[x].file_id,
 							file_ref=app.get_profile_photos(int(chat.id))[x].file_ref,
