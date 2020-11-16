@@ -44,5 +44,4 @@ def read_only(client: Client, message: Message):
                 message_text = message_text.replace('  ', ' ')
             message.edit_text(message_text)
         except Exception as e:
-            print(e)
-            return
+            raise
