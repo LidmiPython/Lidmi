@@ -48,7 +48,7 @@ def read_only(client, message):
 		            message.edit_text(message_text)
 		        except Exception as e:
 		            raise
-		else
+		else:
 			app.send_message(message.chat.id, f"Чтоб выдать `Raed-Only`, Нужно ответить на сообщние человека которому вы хотите выдать `Raed-Only`")
 	else:
 		app.send_message(message.chat.id, f"Команда `ro` требует прав администратора чата. и право на блокировку человека, у вас их нет")
