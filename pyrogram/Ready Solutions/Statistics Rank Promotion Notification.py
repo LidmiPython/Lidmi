@@ -16,7 +16,7 @@ async def send_stat_msg(user_id_un, chat_id_un, cur, conn, app, msg):
         delr = await app.send_message(int(chat_isss), "\n".join(top))
 
 @app.on_message(~filters.edited, group = -1)
-async def static_chat(client, message):
+async def Statistics_Rank_Promotion_Notification(client, message):
     try:
         namebd = f"basa_data/statistic_chat.db"
         conn = sqlite3.connect(namebd)  # или :memory: чтобы сохранить в RAM
