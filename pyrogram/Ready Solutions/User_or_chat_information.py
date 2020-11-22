@@ -1,5 +1,17 @@
 from pyrogram import filters
 
+def dc_id(a):
+	if a == 1:
+		return "\n**Location:** `MIA, Miami FL, USA`\n**IPv4:** `149.154.175.53`\n**IPv6:** `2001:b28:f23d:f001::a`"
+	elif a == 2:
+		return "\n**Location:** `AMS, Amsterdam, NL`\n**IPv4:** `149.154.167.51`\n**IPv6:** `2001:67c:4e8:f002::a`"
+	elif a == 3:
+		return "\n**Location:** `MIA, Miami FL, USA (Alias DC)`\n**IPv4:** `149.154.175.100`\n**IPv6:** `2001:b28:f23d:f003::a`"
+	elif a == 4:
+		return "\n**Location:** `AMS, Amsterdam, NL`\n**IPv4:** `149.154.167.91`\n**IPv6:** `2001:67c:4e8:f004::a`"
+	elif a == 5:
+		return "\n**Location:** `SIN, Singapore, SG`\n**IPv4:** `91.108.56.130`\n**IPv6:** `2001:b28:f23f:f005::a`"
+
 def Ver(a):
 	if a == True:
 		return "✅"
@@ -14,7 +26,6 @@ def сhat_infor(app, message):
 **чат был ограничен**: `{Ver(chat.is_restricted)}`
 **владелец чата**: `{Ver(chat.is_creator)}`
 **чат был помечен как мошенничество**: `{Ver(chat.is_scam)}`
-
 **Название**: `{chat.title}`
 **@Ник**: `{chat.username}`
 **Описание**: `{chat.description}`
@@ -39,15 +50,15 @@ def user_infor(app, message):
 **пользователь был ограничен**: `{Ver(user.is_restricted)}`
 **отмечен как мошенник**: `{Ver(user.is_scam)}`
 **входит в группу поддержки Telegram**: `{Ver(user.is_support)}`
-
 **id**: `{user.id}`
 **имя**: `{user.first_name}`
 **фамилия**: `{user.last_name}`
 **статус пользователя в сети**: `{user.status}`
 **@Ник**: `{user.username}`
-**Дата-Центр**: `{user.dc_id}`
+**Дата-Центр**: `{user.dc_id}` {dc_id(user.dc_id)}
 
-[{user.first_name}](tg://user?id={user.id})"""
+[{user.first_name}](tg://user?id={user.id})
+`[{user.first_name}](tg://user?id={user.id})`"""
 
 @app.on_message(filters.command("me", prefixes="!"))
 def photo_me(client, message):
