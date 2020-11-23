@@ -2,6 +2,19 @@ import sqlite3
 from pyrogram import filters
 from loguru import logger as logg
 
+async def send_stat_msg(user_id_un, chat_id_un, cur, conn, app, msg):
+    if msg.chat.id == -1001158541073:
+        top_count = cur.execute("""SELECT chat_id,user_id,first_name, count, rang FROM stata WHERE user_id=? and chat_id=?""", (user_id_un,chat_id_un,)).fetchone()
+        top = [ "🆙🆙🆙Новый Ранг🆙🆙🆙",
+                    "--------------------",
+                    f'➡️**Имя** = [{top_count[2]}](tg://user?id={top_count[1]})',
+                    f'➡️**колл сообщений** = `{top_count[3]}`',
+                    f'➡️**ранг** = `{top_count[4]}`',
+                    "--------------------",
+                    "** Сообщение автоматически удалится через 1 минуту",]
+        chat_isss = f"-{top_count[0]}"
+        delr = await app.send_message(int(chat_isss), "\n".join(top))
+
 @app.on_message(~filters.edited, group = -1)
 async def Statistics_Rank_Promotion_Notification(client, message):
     namebd = f"basa_data/statistic_chat.db"
