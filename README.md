@@ -1,4 +1,4 @@
-# python-Help
+# Lidmi
 это новый репозиторий телеграм группы **[tg:Python_help_new](https://t.me/Python_help_new)**
 
 Тут будут вылаживатся готовые коды из некоторых библиотек. (если у вас есть свой код напишите **[tg:Smoked_Sampai](https://t.me/Smoked_Sampai)** и мы обезательно добавим)
