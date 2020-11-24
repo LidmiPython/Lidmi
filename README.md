@@ -9,7 +9,6 @@
 # Готовые решения кода по определенным Библиотекам: 
 :warning: :warning: :warning: код был написан на **python 3.8.5**:warning: :warning: :warning:
 ## [pyrogram](https://github.com/Josesofdess/python-Help/tree/main/pyrogram)
-
 ## [telethon](https://github.com/LidmiPython/Lidmi/tree/main/telethon)
 
 # Не рабочие/протестирование методы: 
