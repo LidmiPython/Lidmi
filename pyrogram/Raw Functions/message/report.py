@@ -48,13 +48,13 @@ async def report(_, msg):
     reason=InputReportReasonPornography, 
     message="/"))
 
-    # Сообщить о насилии.
+    # Сообщить о спаме.
     app.invoke(Report(peer=app.resolve_peer(msg.reply_to_message.from_user.id),
     id=app.resolve_peer(msg.reply_to_message_id),
     reason=InputReportReasonSpam, 
     message="/"))
 
-    
+    # Сообщить о насилии.
     app.invoke(Report(peer=app.resolve_peer(msg.reply_to_message.from_user.id),
     id=app.resolve_peer(msg.reply_to_message_id),
     reason=InputReportReasonViolence, 
