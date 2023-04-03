@@ -1,3 +1,15 @@
+from pyrogram.raw.functions.messages import Report
+from pyrogram.raw.types import InputReportReasonChildAbuse
+from pyrogram.raw.types import InputReportReasonCopyright
+from pyrogram.raw.types import InputReportReasonFake
+from pyrogram.raw.types import InputReportReasonGeoIrrelevant
+from pyrogram.raw.types import InputReportReasonIllegalDrugs
+from pyrogram.raw.types import InputReportReasonOther
+from pyrogram.raw.types import InputReportReasonPersonalDetails
+from pyrogram.raw.types import InputReportReasonPornography
+from pyrogram.raw.types import InputReportReasonSpam
+from pyrogram.raw.types import InputReportReasonViolence
+
 @app.on_message()
 async def report(_, msg):
     # Сообщить о жестоком обращении с детьми.
